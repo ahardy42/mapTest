@@ -6,9 +6,9 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "pod-install": "cd ios && pod install && cd ..",
+    "nuclear": "rm -rf node_modules && npm install && cd ios && rm -rf Podfile.lock && rm -rf Pods && pod repo update && pod install && rm -rf build && cd ..",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+    "test": "jest"
   },
   "dependencies": {
     "@react-native-mapbox-gl/maps": "^8.6.0-beta.0",
