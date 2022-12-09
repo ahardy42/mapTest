@@ -1,9 +1,9 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
-$ReactNativeMapboxGLIOSVersion = '~> 6.1'
+$RNMapboxMapsImpl = 'mapbox'
 
 target 'mapTest' do
   config = use_native_modules!
@@ -26,11 +26,11 @@ target 'mapTest' do
   use_flipper!()
 
   pre_install do |installer|
-    $RNMBGL.pre_install(installer)
+    $RNMapboxMaps.pre_install(installer)
   end
 
   post_install do |installer|
-    $RNMBGL.post_install(installer)
+    $RNMapboxMaps.post_install(installer)
     react_native_post_install(installer)
   end
 end

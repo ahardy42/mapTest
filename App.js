@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-import MapboxGL from '@react-native-mapbox-gl/maps';
+import MapboxGL from '@rnmapbox/maps';
 import Config from 'react-native-config';
 
 MapboxGL.setAccessToken(Config.MAPBOX_TOKEN)
